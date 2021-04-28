@@ -29,6 +29,19 @@
             color:yellow;
         }
 
+        /*属性选择器*/
+        /*属性选择器选中具有特定属性的HTML元素*/
+        /*在css当中，属性选择器以[]来定义*/
+        /*以下实例，选中所有具有name属性的元素*/
+        [name] {
+            color:#0044bb;
+        }
+
+        /*为属性指定值*/
+        [name = "ab3"] {
+            font-size:20px;
+        }
+
     </style>
 </head>
 <body>
@@ -37,5 +50,8 @@
 <p class="ab3">这是class选择器2</p>
 <a>日出而作，日入而息</a>
 <span>凿井而饮，耕田而食</span>
+<p name="ab1">具有 name属性的元素1</p>
+<p name="ab2">具有 name属性的元素2</p>
+<p name="ab3">具有 name属性的元素3</p>
 </body>
 </html>
