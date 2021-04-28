@@ -16,9 +16,10 @@ driver.get('https://www.baidu.com/')
 #
 # # 设置最小化浏览器
 # driver.minimize_window()
+# sleep(3)
 
 
-driver.get('https://baike.baidu.com/item/%E7%BB%A5%E5%BE%B7%E5%8E%BF/4612866')
+driver.get('https://weibo.com/login.php')
 # 控制浏览器后退
 driver.back()
 sleep(3)
