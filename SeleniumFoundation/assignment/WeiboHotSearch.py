@@ -5,7 +5,7 @@ from selenium import webdriver
 # 创建一个浏览器驱动
 driver = webdriver.Chrome()
 # 访问微博热搜地址
-driver.get('https://m.weibo.cn/')
+driver.get('https://m.weibo.cn/search?containerid=231583')
 driver.implicitly_wait(10)
 # 点击大家都在搜
 driver.find_element_by_xpath('//div[@class="m-text-cut"]').click()

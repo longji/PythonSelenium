@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+        组合选择器
+        后代选择器 以空格分离
+        子元素选择器 以大于号分离
+        相邻兄弟选择器 以加号分离
+        后续兄都选择器 以小波浪线分离
+        */
+
+        /*后代选择器*/
+        /*后代选择器用于选取某元素的后代元素，无论层级有多深*/
+        #a1 p{
+            color:#54b5f6;
+        }
+
+        /*子元素选择器,只能选中其父元素的直接子元素*/
+        #a1 > p{
+            font-size:20px;
+        }
+
+        /*相邻兄弟选择器，可选择紧挨在另一元素背后的元素，且二者拥有相同的父元素*/
+        div > ol > li:nth-child(2) + li {
+            color:#cc0000;
+        }
+
+        /*后续兄都选择器，选中指定元素之后的所有弟弟*/
+        div > ol > li:nth-child(2) ~ li {
+            background:#66cc66;
+        }
+
+        #a4 > div:nth-child(1) ~div{
+            color:#cc0000;
+        }
+
+    </style>
+</head>
+<body>
+<div id="a1">
+    <p>123456</p>
+    <div id="a2">
+        <p>abcdef</p>
+        <div id="a3">
+            <p>!@#$%^&</p>
+        </div>
+    </div>
+</div>
+<div>
+    <ol>
+        <li>杭州</li>
+        <li>北京</li>
+        <li>西安</li>
+        <li>天津</li>
+    </ol>
+</div>
+<div id="a4">
+    <div>111</div>
+    <div>222</div>
+    <div>
+        <div>333</div>
+    </div>
+
+</div>
+</body>
+</html>

@@ -38,8 +38,13 @@
         }
 
         /*为属性指定值*/
-        [name = "ab3"] {
+        /*匹配一个单词边界*/
+        [name ~= "hello"] {
             font-size:20px;
+        }
+        /*指定标签类型*/
+        a[name] {
+            color:#65b5f6;
         }
 
     </style>
@@ -50,8 +55,12 @@
 <p class="ab3">这是class选择器2</p>
 <a>日出而作，日入而息</a>
 <span>凿井而饮，耕田而食</span>
+<br>
 <p name="ab1">具有 name属性的元素1</p>
 <p name="ab2">具有 name属性的元素2</p>
 <p name="ab3">具有 name属性的元素3</p>
+<a name="ab4">具有 name属性的元素4</a>
+<br>
+<span name="hello world">匹配单词边界</span>
 </body>
 </html>
