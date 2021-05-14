@@ -27,17 +27,19 @@ driver.find_element_by_css_selector("div[class=\"col-sm-10\"] > input[name=\"nam
 driver.find_element_by_css_selector("div[class=\"col-sm-10\"] > input[name=\"aliasname\"]").send_keys("测试项目{}".format(time.strftime("%Y-%m-%d %X"),time.localtime()))
 
 # 开始日期
-started = driver.find_element_by_css_selector("input[class=\"form-control dpd1\"]")
-started.click()
-started.send_keys(Keys.CONTROL,'a')
-started.send_keys(Keys.BACK_SPACE)
-started.send_keys('2021-05-14')
+# started = driver.find_element_by_css_selector("input[class=\"form-control dpd1\"]")
+# started.click()
+# started.send_keys(Keys.CONTROL,'a')
+# started.send_keys(Keys.BACK_SPACE)
+# started.send_keys('2021-05-14')
+driver.execute_script('document.querySelector("div > input.form-control.dpd1").value="2021-05-16"')
 # 结束日期
-ended = driver.find_element_by_css_selector("input[class=\"form-control dpd2\"]")
-ended.click()
-ended.send_keys(Keys.CONTROL,'a')
-ended.send_keys(Keys.BACK_SPACE)
-ended.send_keys('2021-05-18')
+# ended = driver.find_element_by_css_selector("input[class=\"form-control dpd2\"]")
+# ended.click()
+# ended.send_keys(Keys.CONTROL,'a')
+# ended.send_keys(Keys.BACK_SPACE)
+# ended.send_keys('2021-05-18')
+driver.execute_script('document.querySelector("div > input.form-control.dpd2").value="2021-05-18"')
 
 # 切换到iframe
 eleIframe = driver.find_element_by_css_selector("iframe")
@@ -48,3 +50,10 @@ driver.find_element_by_css_selector("body[class=\"ke-content\"]").send_keys("松
 driver.switch_to.default_content()
 # 点击保存按钮
 driver.find_element_by_css_selector("button[class=\"btn btn-primary\"]").click()
+# 关闭弹框
+driver.find_element_by_css_selector("button.close").click()
+
+
+
+# 关闭浏览器
+driver.quit()
